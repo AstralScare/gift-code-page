@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveal Your Gift Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: whitesmoke;
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .instructions {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .gift-code {
+            font-size: 18px;
+            font-weight: bold;
+            color: #28a745;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 Честит Рожден Ден Лорче!</h1>
+        <p>Цъкни тук за да видиш изненадата.</p>
+        <button id="revealButton">Покажи Подарък</button>
+
+        <div id="codeSection" class="hidden">
+            <p class="gift-code" id="giftCode">DC100VA7Y71HN9FE1GB79U011
+            </p>
+            <p class="instructions">Това е твоят ваучер за <a href="https://www.ozone.bg/">Ozone.bg</a>!</p>
+            <p class="instructions">Зареждане на вашия електронен ваучер в профила:
+
+                Отваряте Моят Профил -> Портфейл
+                В празното поле „Зареди ваучер“ въвеждате уникалния код и натискате оранжевия бутон „Приложи ваучер“.
+                Как се използва електронният ваучер, след като бъде зареден в профила:
+                Избирате продукти, които искате за закупите и ги добавяте в кошницата.
+                При последната стъпка се поставя отметка на Виртуален портфейл. Валиден до: 21.12.2025</p>
+        </div>
+    </div>
+
+    <script>
+        const revealButton = document.getElementById('revealButton');
+        const codeSection = document.getElementById('codeSection');
+
+        revealButton.addEventListener('click', () => {
+            codeSection.classList.remove('hidden');
+            revealButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
